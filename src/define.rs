@@ -37,9 +37,9 @@ impl CPUTarget {
 
     pub(crate) fn affinity(&self) -> u32 {
         self.aff0 as u32
-            | (self.aff1 as u32) << 8
-            | (self.aff2 as u32) << 16
-            | (self.aff3 as u32) << 24
+            | ((self.aff1 as u32) << 8)
+            | ((self.aff2 as u32) << 16)
+            | ((self.aff3 as u32) << 24)
     }
 
     pub(crate) fn cpu_target_list(&self) -> u8 {
